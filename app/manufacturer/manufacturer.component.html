@@ -1,0 +1,17 @@
+<div class="container">
+<div class="jumbotron">
+  <h3 class="text-center">Add Manufacturer</h3><br><br>
+  <form [formGroup]='dataForm' (ngSubmit)="PostData(dataForm.value)">
+    <div class="row">
+      <div class="col-lg-3">
+      </div>
+      <div class="col-lg-4">
+          <input type="text" formControlName='manufacturer' class="form-control" id="manufacturer" placeholder="Enter Manufacturer Name">
+      </div>
+      <div class="col-lg-4">
+          <button type="submit" class="btn btn-primary">Add Manufacturer</button>  
+      </div>
+    </div>
+  </form>
+</div>
+</div>

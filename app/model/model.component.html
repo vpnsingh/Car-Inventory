@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="jumbotron">
+      <h3 class="text-center">Add Model</h3><br><br>
+      <form [formGroup]='dataForm' (ngSubmit)="PostData(dataForm.value)">
+      <div class="row"> 
+        <div class="col-lg-1"></div> 
+        <div class="col-lg-4">  
+        <input type="text" formControlName='model' class="form-control" id="manufacturer" placeholder="Enter Model Name" size="40">
+        </div>
+        <div class="col-lg-4">
+          <select formControlName='manufacturer' class="form-control">
+            <option value="Manufacturer">Select Manufacturer</option>
+            <option *ngFor="let m of fetch_manufacturer;">{{m.manufacturer}}</option>
+          </select>
+        </div>
+        <div class="col-lg-2">  
+          <button type="submit" class="btn btn-primary">Add Manufacturer</button>
+        </div>    
+      </div>      
+      </form>
+    </div>
+    </div>
